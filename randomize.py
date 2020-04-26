@@ -1,5 +1,7 @@
 from typing import List, Tuple
+from os.path import exists
 import random
+import sys
 
 class Character:
     name: str
@@ -7,9 +9,7 @@ class Character:
 
 
 def main():
-    #TODO: add support for other games
-    game_name: str = "fe8"
-
+    game_name = get_game_name()
     game_data = readData(game_name)
     game_chars = parseData(game_data)
     selected_units = select_units(game_chars, 10)
@@ -18,6 +18,22 @@ def main():
         print(unit)
 
     return
+
+
+def get_game_name() -> str:
+    game_name: str = ""
+    
+    if len(sys.argv) < 2:
+        game_name = input("Please enter a game entry in fe# format (e.g. fe8):\t")
+    else:
+        game_name = sys.argv[1]
+    
+    data_path = "data/" + game_name + ".csv"
+    if not exists(data_path):
+        print("No data file found for " + game_name)
+        exit()
+    
+    return game_name
 
 
 def readData(game_name: str) -> List[List[str]]:
