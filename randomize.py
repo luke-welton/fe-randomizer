@@ -17,8 +17,6 @@ def main():
     for unit in selected_units:
         print(unit)
 
-    return
-
 
 def get_game_name() -> str:
     game_name: str = ""
