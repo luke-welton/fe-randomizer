@@ -10,8 +10,8 @@ class Character:
 
 def main():
     game_name = get_game_name()
-    game_data = readData(game_name)
-    game_chars = parseData(game_data)
+    game_data = read_data(game_name)
+    game_chars = parse_data(game_data)
     selected_units = select_units(game_chars, 10)
 
     for unit in selected_units:
@@ -34,7 +34,7 @@ def get_game_name() -> str:
     return game_name
 
 
-def readData(game_name: str) -> List[List[str]]:
+def read_data(game_name: str) -> List[List[str]]:
     data: List[List[str]] = []
 
     game_file = "data/" + game_name + ".csv"
@@ -45,7 +45,7 @@ def readData(game_name: str) -> List[List[str]]:
     return data
 
 
-def parseData(data: List[List[str]]) -> List[Character]:
+def parse_data(data: List[List[str]]) -> List[Character]:
     characters: List[Character] = []
 
     for entry in data:
