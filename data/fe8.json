@@ -1,0 +1,384 @@
+{
+    "characters": [
+        {
+            "name": "Eirika",
+            "class": "Lord"
+        },
+        {
+            "name": "Seth",
+            "class": "Paladin"
+        },
+        {
+            "name": "Franz",
+            "class": "Cavalier"
+        },
+        {
+            "name": "Gilliam",
+            "class": "Knight"
+        },
+        {
+            "name": "Vanessa",
+            "class": "Pegasus Knight"
+        },
+        {
+            "name": "Moulder",
+            "class": "Priest"
+        },
+        {
+            "name": "Ross",
+            "class": "Journeyman"
+        },
+        {
+            "name": "Garcia",
+            "class": "Fighter"
+        },
+        {
+            "name": "Neimi",
+            "class": "Archer"
+        },
+        {
+            "name": "Colm",
+            "class": "Thief"
+        },
+        {
+            "name": "Artur",
+            "class": "Monk"
+        },
+        {
+            "name": "Lute",
+            "class": "Mage"
+        },
+        {
+            "name": "Natasha",
+            "class": "Cleric"
+        },
+        {
+            "name": "Joshua",
+            "class": "Myrmidon"
+        },
+        {
+            "name": "Ephraim",
+            "class": "Lord"
+        },
+        {
+            "name": "Forde",
+            "class": "Cavalier"
+        },
+        {
+            "name": "Kyle",
+            "class": "Cavalier"
+        },
+        {
+            "name": "Tana",
+            "class":"Pegasus Knight"
+        },
+        {
+            "name": "Amelia",
+            "class": "Recruit"
+        },
+        {
+            "name": "Innes",
+            "class": "Sniper"
+        },
+        {
+            "name": "Gerik",
+            "class": "Mercenary"
+        },
+        {
+            "name": "Tethys",
+            "class": "Dancer"
+        },
+        {
+            "name": "Marisa",
+            "class": "Myrmidon"
+        },
+        {
+            "name": "L'Arachel",
+            "class": "Troubadour"
+        },
+        {
+            "name": "Dozla",
+            "class": "Berserker"
+        },
+        {
+            "name": "Saleh",
+            "class": "Sage"
+        },
+        {
+            "name": "Ewan",
+            "class": "Pupil"
+        },
+        {
+            "name": "Cormag",
+            "class": "Wyvern Rider"
+        },
+        {
+            "name": "Rennac",
+            "class": "Rogue"
+        },
+        {
+            "name": "Duessel",
+            "class": "Great Knight"
+        },
+        {
+            "name": "Knoll",
+            "class": "Shaman"
+        },
+        {
+            "name": "Myrrh",
+            "class": "Manakete"
+        },
+        {
+            "name": "Syrene",
+            "class": "Falcon Knight"
+        }
+    ],
+    "classes": [
+        {
+            "name": "Lord",
+            "promotions": [
+                "Great Lord"
+            ]
+        },
+        {
+            "name": "Great Lord",
+            "promotions": []
+        },
+        {
+            "name": "Recruit",
+            "promotions": [
+                "Knight",
+                "Cavalier",
+                "Super Recruit"
+            ]
+        },
+        {
+            "name": "Super Recruit",
+            "promotions": []
+        },
+        {
+            "name": "Knight",
+            "promotions": [
+                "General",
+                "Great Knight"
+            ]
+        },
+        {
+            "name": "General",
+            "promotions": []
+        },
+        {
+            "name": "Great Knight",
+            "promotions": []
+        },
+        {
+            "name": "Cavalier",
+            "promotions": [
+                "Great Knight",
+                "Paladin"
+            ]
+        },
+        {
+            "name": "Paladin",
+            "promotions": []
+        },
+        {
+            "name": "Archer",
+            "promotions": [
+                "Sniper",
+                "Ranger"
+            ]
+        },
+        {
+            "name": "Sniper",
+            "promotions": []
+        },
+        {
+            "name": "Ranger",
+            "promotions": []
+        },
+        {
+            "name": "Mercenary",
+            "promotions": [
+                "Ranger",
+                "Hero"
+            ]
+        },
+        {
+            "name": "Hero",
+            "promotions": []
+        },
+        {
+            "name": "Journeyman",
+            "promotions": [
+                "Fighter",
+                "Pirate",
+                "Super Journeyman"
+            ]
+        },
+        {
+            "name": "Super Journeyman",
+            "promotions": []
+        },
+        {
+            "name": "Fighter",
+            "promotions": [
+                "Hero",
+                "Warrior"
+            ]
+        },
+        {
+            "name": "Warrior",
+            "promotions": []
+        },
+        {
+            "name": "Pirate",
+            "promotions": [
+                "Warrior",
+                "Berserker"
+            ]
+        },
+        {
+            "name": "Berserker",
+            "promotions": []
+        },
+        {
+            "name": "Myrmidon",
+            "promotions": [
+                "Swordmaster",
+                "Assassin"
+            ]
+        },
+        {
+            "name": "Swordmaster",
+            "promotions": []
+        },
+        {
+            "name": "Assassin",
+            "promotions": []
+        },
+        {
+            "name": "Thief",
+            "promotions": [
+                "Assassin",
+                "Rogue"
+            ]
+        },
+        {
+            "name": "Rogue",
+            "promotions": []
+        },
+        {
+            "name": "Pegasus Knight",
+            "promotions": [
+                "Falcon Knight",
+                "Wyvern Knight"
+            ]
+        },
+        {
+            "name": "Falcon Knight",
+            "promotions": []
+        },
+        {
+            "name": "Wyvern Knight",
+            "promotions": []
+        },
+        {
+            "name": "Wyvern Rider",
+            "promotions": [
+                "Wyvern Knight",
+                "Wyvern Lord"
+            ]
+        },
+        {
+            "name": "Wyvern Lord",
+            "promotions": []
+        },
+        {
+            "name": "Troubadour",
+            "promotions": [
+                "Mage Knight",
+                "Valkyrie"
+            ]
+        },
+        {
+            "name": "Mage Knight",
+            "promotions": []
+        },
+        {
+            "name": "Valkyrie",
+            "promotions": []
+        },
+        {
+            "name": "Cleric",
+            "promotions": [
+                "Valkyrie",
+                "Bishop"
+            ]
+        },
+        {
+            "name": "Bishop",
+            "promotions": []
+        },
+        {
+            "name": "Monk",
+            "promotions": [
+                "Bishop",
+                "Sage"
+            ]
+        },
+        {
+            "name": "Sage",
+            "promotions": []
+        },
+        {
+            "name": "Monk",
+            "promotions": [
+                "Bishop",
+                "Sage"
+            ]
+        },
+        {
+            "name": "Pupil",
+            "promotions": [
+                "Mage",
+                "Shaman",
+                "Super Pupil"
+            ]
+        },
+        {
+            "name": "Super Pupil",
+            "promotions": []
+        },
+        {
+            "name": "Mage",
+            "promotions": [
+                "Sage",
+                "Mage Knight"
+            ]
+        },
+        {
+            "name": "Shaman",
+            "promotions": [
+                "Druid",
+                "Summoner"
+            ]
+        },
+        {
+            "name": "Druid",
+            "promotions": []
+        },
+        {
+            "name": "Summoner",
+            "promotions": []
+        },
+        {
+            "name": "Dancer",
+            "promotions": []
+        },
+        {
+            "name": "Manakete",
+            "promotions": []
+        }
+    ]
+}
