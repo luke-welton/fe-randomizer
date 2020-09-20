@@ -1,7 +1,7 @@
 from typing import List, Tuple
 from os.path import exists
+from sys import argv
 import random
-import sys
 
 class Character:
     name: str
@@ -21,10 +21,10 @@ def main():
 def get_game_name() -> str:
     game_name: str = ""
     
-    if len(sys.argv) < 2:
+    if len(argv) < 2:
         game_name = input("Please enter a game entry in fe# format (e.g. fe8):\t")
     else:
-        game_name = sys.argv[1]
+        game_name = argv[1]
     
     data_path = "data/" + game_name + ".csv"
     if not exists(data_path):
