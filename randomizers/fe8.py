@@ -1,8 +1,19 @@
 import json
 import random
-from typing import Dict
+from typing import Dict, List
 from randomizers import BaseRandomizer
 from structs import Character, BranchedClass
+
+
+class SacredStonesCharacter(Character):
+    def __init__(self, name: str, base_class: BranchedClass):
+        super().__init__(name)
+
+        self.base_class: BranchedClass = base_class
+        self.selected_promotion: BranchedClass = None
+
+    def get_final_promotions(self) -> List[BranchedClass]:
+        return self.base_class.get_final_promotions()
 
 
 class SacredStonesRandomizer(BaseRandomizer):
@@ -42,22 +53,15 @@ class SacredStonesRandomizer(BaseRandomizer):
             char_name: str = characterJSON["name"]
             char_class: Class = self._classes[characterJSON["class"]]
 
-            self._characters[char_name] = Character(char_name, char_class)
+            self._characters[char_name] = SacredStonesCharacter(char_name, char_class)
 
 
     def randomize_classes(self):
-        for selected_unit in self._selected_units:
-            current_class: BranchedClass = selected_unit.char_class
-
-            while current_class.has_promotions():
-                current_class.selected_promotion = random.choice(current_class.promotions)
-                current_class = current_class.selected_promotion
+        for unit in self._selected_units:
+            final_promotions: List[BranchedClass] = unit.get_final_promotions()
+            unit.selected_promotion = random.choice(final_promotions)
 
 
     def print_selections(self):
         for unit in self._selected_units:
-            unit_class: BranchedClass = unit.char_class
-            while (unit_class.has_promotions()):
-                unit_class = unit_class.selected_promotion
-            
-            print(f"{unit.name} - {unit_class.name}")
+            print(f"{unit.name} - {unit.selected_promotion.name}")

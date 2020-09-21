@@ -1,3 +1,4 @@
+from __future__ import annotations
 from typing import List
 
 
@@ -7,11 +8,10 @@ class Class:
 
 
 class BranchedClass(Class):
-    def __init__(self, name):
+    def __init__(self, name: str):
         super().__init__(name)
 
         self.promotions: List[BranchedClass] = []
-        self.selected_promotion = None
 
     def has_promotions(self) -> bool:
         return len(self.promotions) > 0
@@ -19,16 +19,26 @@ class BranchedClass(Class):
     def add_promotion(self, promotion: BranchedClass) -> None:
         self.promotions.append(promotion)
 
+    def get_final_promotions(self) -> List[BranchedClass]:
+        if self.has_promotions():
+            promotions_list: List[BranchedClass] = []
+
+            for promotion in self.promotions:
+                promotions_list.extend(promotion.get_final_promotions())
+
+            return list(dict.fromkeys(promotions_list))
+        else:
+            return [self]
+
 
 class Character:
-    def __init__(self, name, char_class=None):
+    def __init__(self, name: str):
         self.name: str = name
-        self.char_class: Class = char_class
 
 
 class ReclassableCharacter(Character):
-    def __init__(self, name, base_class):
-        super().__init__(name, base_class)
+    def __init__(self, name: str):
+        super().__init__(name)
 
         self.classes: List[Class] = []
     
