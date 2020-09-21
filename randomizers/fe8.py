@@ -53,14 +53,18 @@ class SacredStonesRandomizer(BaseRandomizer):
     def parse_classes(self, data: dict) -> None:
         for classJSON in data["classes"]:
             class_name: str = classJSON["name"]
-            self._classes[class_name] = MultiTierBranchedClass(class_name)
-        
-        for classJSON in data["classes"]:
-            class_obj: MultiTierBranchedClass = self._classes[classJSON["name"]]
 
-            for promotion_str in classJSON["promotions"]:
-                promotion: MultiTierBranchedClass = self._classes[promotion_str]
-                class_obj.add_promotion(promotion)
+            if class_name not in self._classes:
+                self._classes[class_name] = MultiTierBranchedClass(class_name)
+            
+            class_obj = self._classes[class_name]
+
+            for promotion_name in classJSON["promotions"]:
+                if promotion_name not in self._classes:
+                    self._classes[promotion_name] = MultiTierBranchedClass(promotion_name)
+
+                promotion_obj: MultiTierBranchedClass = self._classes[promotion_name]
+                class_obj.add_promotion(promotion_obj)
 
     def parse_characters(self, data: dict) -> None:
         for characterJSON in data["characters"]:
