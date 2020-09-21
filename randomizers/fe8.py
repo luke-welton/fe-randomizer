@@ -1,0 +1,47 @@
+import json
+from typing import Dict
+from randomizers import BaseRandomizer
+from structs import Character, Class
+
+class SacredStonesRandomizer(BaseRandomizer):
+    def __init__(self):
+        super().__init__()
+
+        self._num_to_select = 10
+        self._multiple_promotions = True
+
+        self._classes: Dict[Class] = {}
+
+
+    def parse_data(self) -> None:
+        with open("data/fe8.json", "r") as f:
+            data: dict = json.load(f)
+
+            self.parse_classes(data)
+            self.parse_characters(data)
+        
+        self.add_guaranteed_unit(self._characters["Eirika"])
+        self.add_guaranteed_unit(self._characters["Ephraim"])
+
+    def parse_classes(self, data: dict) -> None:
+        for classJSON in data["classes"]:
+            class_name: str = classJSON["name"]
+            self._classes[class_name] = Class(class_name)
+        
+        for classJSON in data["classes"]:
+            class_obj: Class = self._classes[classJSON["name"]]
+
+            for promotion_str in classJSON["promotions"]:
+                promotion: Class = self._classes[promotion_str]
+                class_obj.add_promotion(promotion)
+
+    def parse_characters(self, data: dict) -> None:
+        for characterJSON in data["characters"]:
+            char_name: str = characterJSON["name"]
+            char_class: Class = self._classes[characterJSON["class"]]
+
+            self._characters[char_name] = Character(char_name, char_class)
+
+
+if __name__ == "__main__":
+    r = SacredStonesRandomizer()
