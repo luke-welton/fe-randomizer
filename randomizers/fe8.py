@@ -23,7 +23,7 @@ class SacredStonesRandomizer(BaseRandomizer):
             branched_promotions=True
         )
 
-        self._classes: Dict[Class] = {}
+        self._classes: Dict[BranchedClass] = {}
 
 
     def parse_data(self) -> None:
@@ -51,7 +51,7 @@ class SacredStonesRandomizer(BaseRandomizer):
     def parse_characters(self, data: dict) -> None:
         for characterJSON in data["characters"]:
             char_name: str = characterJSON["name"]
-            char_class: Class = self._classes[characterJSON["class"]]
+            char_class: BranchedClass = self._classes[characterJSON["class"]]
 
             self._characters[char_name] = SacredStonesCharacter(char_name, char_class)
 
