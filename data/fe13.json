@@ -1,0 +1,616 @@
+{
+    "characters": [
+        {
+            "name": "Robin",
+            "classes": [
+                "Tactician",
+                "*"
+            ],
+            "romance-options": "*"
+        },
+        {
+            "name": "Chrom",
+            "gender": "Male",
+            "classes": [
+                "Lord",
+                "Cavalier",
+                "Archer"
+            ],
+            "romance-options": [
+                "Sully",
+                "Sumia",
+                "Maribelle",
+                "Olivia",
+                "Robin"
+            ]
+        },
+        {
+            "name": "Lissa",
+            "gender": "Female",
+            "classes": [
+                "Cleric",
+                "Pegasus Knight",
+                "Troubadour"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Priest",
+                "Myrmidon",
+                "Barbarian"
+            ]
+        },
+        {
+            "name": "Frederick",
+            "gender": "Male",
+            "classes": [
+                "Cavalier",
+                "Knight",
+                "Wyvern Rider"
+            ],
+            "romance-options": "*"
+        },
+        {
+            "name": "Sully",
+            "gender": "Female",
+            "classes": [
+                "Cavalier",
+                "Myrmidon",
+                "Wyvern Rider"
+            ],
+            "romance-options": "*"
+        },
+        {
+            "name": "Virion",
+            "gender": "Male",
+            "classes": [
+                "Archer",
+                "Wyvern Rider",
+                "Mage"
+            ],
+            "romance-options": "*"
+        },
+        {
+            "name": "Stahl",
+            "gender": "Male",
+            "classes": [
+                "Cavalier",
+                "Archer",
+                "Myrmidon"
+            ],
+            "romance-options": "*"
+        },
+        {
+            "name": "Vaike",
+            "gender": "Male",
+            "classes": [
+                "Fighter",
+                "Thief",
+                "Barbarian"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Knight",
+                "Mercenary"
+            ]
+        },
+        {
+            "name": "Miriel",
+            "gender": "Female",
+            "classes": [
+                "Mage",
+                "Troubadour",
+                "Dark Mage"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Barbarian"
+            ]
+        },
+        {
+            "name": "Sumia",
+            "gender": "Female",
+            "classes": [
+                "Pegasus Knight",
+                "Knight",
+                "Cleric"
+            ],
+            "romance-options": [
+                "Chrom",
+                "Frederick",
+                "Gaius",
+                "Henry",
+                "Robin"
+            ]
+        },
+        {
+            "name": "Kellam",
+            "gender": "Male",
+            "classes": [
+                "Knight",
+                "Thief",
+                "Priest"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Cleric"
+            ]
+        },
+        {
+            "name": "Donnel",
+            "gender": "Male",
+            "classes": [
+                "Villager",
+                "Fighter",
+                "Mercenary"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Pegasus Knight",
+                "Troubadour"
+            ]
+        },
+        {
+            "name": "Lon'qu",
+            "gender": "Male",
+            "classes": [
+                "Myrmidon",
+                "Thief",
+                "Wyvern Rider"
+            ],
+            "romance-options": "*"
+        },
+        {
+            "name": "Ricken",
+            "gender": "Male",
+            "classes": [
+                "Mage",
+                "Cavalier",
+                "Archer"
+            ],
+            "romance-options": "*"
+        },
+        {
+            "name": "Maribelle",
+            "gender": "Female",
+            "classes": [
+                "Troubadour",
+                "Pegasus Knight",
+                "Mage"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Cavalier",
+                "Priest"
+            ]
+        },
+        {
+            "name": "Panne",
+            "gender": "Female",
+            "classes": [
+                "Taguel",
+                "Thief",
+                "Wyvern Rider"
+            ],
+            "romance-options": "*"
+        },
+        {
+            "name": "Gaius",
+            "gender": "Male",
+            "classes": [
+                "Thief",
+                "Fighter",
+                "Myrmidon"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Pegasus Knight"
+            ]
+        },
+        {
+            "name": "Cordelia",
+            "gender": "Female",
+            "classes": [
+                "Pegasus Knight",
+                "Mercenary",
+                "Dark Mage"
+            ],
+            "romance-options": "*"
+        },
+        {
+            "name": "Gregor",
+            "gender": "Male",
+            "classes": [
+                "Mercenary",
+                "Barbarian",
+                "Myrmidon"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Troubadour"
+            ]
+        },
+        {
+            "name": "Nowi",
+            "gender": "Female",
+            "classes": [
+                "Manakete",
+                "Mage",
+                "Wyvern Rider"
+            ],
+            "romance-options": "*"
+        },
+        {
+            "name": "Libra",
+            "gender": "Male",
+            "classes": [
+                "Priest",
+                "Mage",
+                "Dark Mage"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Cleric"
+            ]
+        },
+        {
+            "name": "Tharja",
+            "gender": "Female",
+            "classes": [
+                "Dark Mage",
+                "Knight",
+                "Archer"
+            ],
+            "romance-options": "*"
+        },
+        {
+            "name": "Anna",
+            "gender": "Female",
+            "classes": [
+                "Thief",
+                "Archer",
+                "Mage"
+            ],
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Olivia",
+            "gender": "Female",
+            "classes": [
+                "Dancer",
+                "Myrmidon",
+                "Pegasus Knight"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Mercenary",
+                "Barbarian"
+            ]
+        },
+        {
+            "name": "Cherche",
+            "gender": "Female",
+            "classes": [
+                "Wyvern Rider",
+                "Troubadour",
+                "Cleric"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Fighter",
+                "Priest"
+            ]
+        },
+        {
+            "name": "Henry",
+            "gender": "Male",
+            "classes": [
+                "Dark Mage",
+                "Barbarian",
+                "Thief"
+            ],
+            "romance-options": "*",
+            "replacement-classes": [
+                "Troubadour"
+            ]
+        },
+        {
+            "name": "Say'ri",
+            "gender": "Female",
+            "classes": [
+                "Myrmidon",
+                "Pegasus Knight",
+                "Wyvern Rider"
+            ],
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Tiki",
+            "gender": "Female",
+            "classes": [
+                "Manakete",
+                "Wyvern Rider",
+                "Mage"
+            ],
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Basilio",
+            "gender": "Male",
+            "classes": [
+                "Fighter",
+                "Barbarian",
+                "Knight"
+            ],
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Flavia",
+            "gender": "Female",
+            "classes": [
+                "Mercenary",
+                "Thief",
+                "Knight"
+            ],
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Lucina",
+            "gender": "Female",
+            "parent": "Chrom",
+            "classes": [
+                "Lord"
+            ],
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Owain",
+            "gender": "Male",
+            "parent": "Lissa",
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Inigo",
+            "gender": "Male",
+            "parent": "Olivia",
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Brady",
+            "gender": "Male",
+            "parent": "Maribelle",
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Kjelle",
+            "gender": "Female",
+            "parent": "Sully",
+            "classes": [
+                "Knight"
+            ],
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Cynthia",
+            "gender": "Female",
+            "parent": "Sumia",
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Severa",
+            "gender": "Female",
+            "parent": "Cordelia",
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Gerome",
+            "gender": "Male",
+            "parent": "Cherche",
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Morgan",
+            "parent": "Robin"
+        },
+        {
+            "name": "Yarne",
+            "gender": "Male",
+            "parent": "Panne",
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Laurent",
+            "gender": "Male",
+            "parent": "Miriel",
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Noire",
+            "gender": "Female",
+            "parent": "Tharja",
+            "romance-options": "Robin"
+        },
+        {
+            "name": "Nah",
+            "gender": "Female",
+            "parent": "Nowi",
+            "romance-options": "Robin"
+        }
+    ],
+    "classes": [
+        {
+            "name": "Lord",
+            "special": true,
+            "gender-exclusive": false,
+            "promotions": [
+                "Great Lord"
+            ]
+        },
+        {
+            "name": "Tactician",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": [
+                "Grandmaster"
+            ]
+        },
+        {
+            "name": "Cavalier",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": [
+                "Paladin",
+                "Great Knight"
+            ]
+        },
+        {
+            "name": "Knight",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": [
+                "Great Knight",
+                "General"
+            ]
+        },
+        {
+            "name": "Myrmidon",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": [
+                "Swordmaster",
+                "Assassin"
+            ]
+        },
+        {
+            "name": "Thief",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": [
+                "Assassin",
+                "Trickster"
+            ]
+        },
+        {
+            "name": "Barbarian",
+            "special": false,
+            "gender-exclusive": true,
+            "promotions": [
+                "Berserker",
+                "Warrior"
+            ]
+        },
+        {
+            "name": "Fighter",
+            "special": false,
+            "gender-exclusive": true,
+            "promotions": [
+                "Warrior",
+                "Hero"
+            ]
+        },
+        {
+            "name": "Mercenary",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": [
+                "Hero",
+                "Bow Knight"
+            ]
+        },
+        {
+            "name": "Archer",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": [
+                "Bow Knight",
+                "Sniper"
+            ]
+        },
+        {
+            "name": "Pegasus Knight",
+            "special": false,
+            "gender-exclusive": true,
+            "promotions": [
+                "Falcon Knight",
+                "Dark Flier"
+            ]
+        },
+        {
+            "name": "Wyvern Rider",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": [
+                "Wyvern Lord",
+                "Griffon Rider"
+            ]
+        },
+        {
+            "name": "Dark Mage",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": [
+                "Sorceror",
+                "Dark Knight"
+            ]
+        },
+        {
+            "name": "Mage",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": [
+                "Dark Knight",
+                "Sage"
+            ]
+        },
+        {
+            "name": "Priest",
+            "special": false,
+            "gender-exclusive": true,
+            "promotions": [
+                "Sage",
+                "War Monk"
+            ]
+        },
+        {
+            "name": "Cleric",
+            "special": false,
+            "gender-exclusive": true,
+            "promotions": [
+                "Sage",
+                "War Cleric"
+            ]
+        },
+        {
+            "name": "Troubadour",
+            "special": false,
+            "gender-exclusive": true,
+            "promotions": [
+                "War Cleric",
+                "Valkyrie"
+            ]
+        },
+        {
+            "name": "Villager",
+            "special": false,
+            "gender-exclusive": true,
+            "promotions": []
+        },
+        {
+            "name": "Taguel",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": []
+        },
+        {
+            "name": "Manakete",
+            "special": false,
+            "gender-exclusive": false,
+            "promotions": []
+        },
+        {
+            "name": "Dancer",
+            "special": true,
+            "gender-exclusive": true,
+            "promotions": []
+        }
+    ]
+}
