@@ -1,18 +1,17 @@
 from sys import argv
-import randomizers as Randomizer
+from randomizers import BaseRandomizer as Randomizer, get_randomizer
+from typing import List
+from structs import Character
 
 def main() -> None:
     game_name: str = get_game_name()
-    randomizer: Randomizer.BaseRandomizer = get_randomizer(game_name)
+    randomizer: Randomizer = get_randomizer(game_name)
+
     randomizer.parse_data()
+    selected_units: List[Character] = randomizer.select_units()
 
-
-def get_randomizer(game_name: str) -> Randomizer.BaseRandomizer:
-    switch = {
-        "fe8": Randomizer.SacredStonesRandomizer()
-    }
-
-    return switch.get(game_name, lambda: Randomizer.BaseRandomizer())
+    for unit in selected_units:
+        print(unit.name)
 
 
 def get_game_name() -> str: 
