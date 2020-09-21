@@ -4,6 +4,7 @@ from typing import Dict
 from randomizers import BaseRandomizer
 from structs import Character, BranchedClass
 
+
 class SacredStonesRandomizer(BaseRandomizer):
     def __init__(self):
         super().__init__()
@@ -51,7 +52,8 @@ class SacredStonesRandomizer(BaseRandomizer):
             while current_class.has_promotions():
                 current_class.selected_promotion = random.choice(current_class.promotions)
                 current_class = current_class.selected_promotion
-    
+
+
     def print_selections(self):
         for unit in self._selected_units:
             unit_class: BranchedClass = unit.char_class

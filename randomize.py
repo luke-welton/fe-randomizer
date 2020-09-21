@@ -3,6 +3,7 @@ from randomizers import BaseRandomizer as Randomizer, get_randomizer
 from typing import List
 from structs import Character
 
+
 def main() -> None:
     game_name: str = get_game_name()
     randomizer: Randomizer = get_randomizer(game_name)

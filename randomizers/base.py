@@ -1,6 +1,7 @@
-from typing import Dict, List, Tuple
+from typing import Dict, List
 from structs import Character
 import random
+
 
 class BaseRandomizer:
     def __init__(self):
