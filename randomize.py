@@ -8,10 +8,13 @@ def main() -> None:
     randomizer: Randomizer = get_randomizer(game_name)
 
     randomizer.parse_data()
-    selected_units: List[Character] = randomizer.select_units()
+    randomizer.select_units()
 
-    for unit in selected_units:
-        print(unit.name)
+    if randomizer.has_multiple_promotions() or randomizer.can_reclass():
+        randomizer.randomize_classes()
+    
+    randomizer.print_selections()
+
 
 
 def get_game_name() -> str: 

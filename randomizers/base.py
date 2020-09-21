@@ -8,31 +8,38 @@ class BaseRandomizer:
 
         self._num_to_select = 0
         self._guaranteed_units: List[Character] = []
+        self._selected_units: List[Character] = []
 
-        self._multiple_promotions: bool = False
+        self._branched_promotions: bool = False
+        self._reclassing: bool = False
         self._marriage: bool = False
 
 
     def has_multiple_promotions(self) -> bool:
-        return self._branched_promotion
+        return self._branched_promotions
+
+    def can_reclass(self) -> bool:
+        return self._reclassing
 
     def can_marry(self) -> bool:
         return self._marriage
 
     
-    def randomize_classes(self, units: List[Character]) -> List[Character]:
+    def randomize_classes(self) -> None:
         raise NotImplementedError()
 
-    def randomize_pairings(self) -> List[Tuple[Character]]:
+    def randomize_pairings(self) -> None:
         raise NotImplementedError()
 
     def parse_data(self) -> None:
         raise NotImplementedError()
 
+
     def add_guaranteed_unit(self, unit: Character) -> None:
         self._guaranteed_units.append(unit)
 
-    def select_units(self) -> List[Character]:
+
+    def select_units(self) -> None:
         selected_units: List[Character] = []
         selected_units.extend(self._guaranteed_units)
 
@@ -41,4 +48,8 @@ class BaseRandomizer:
             if unit not in selected_units:
                 selected_units.append(unit)
 
-        return selected_units
+        self._selected_units = selected_units
+
+    def print_selections(self) -> None:
+        for unit in self._selected_units:
+            print(unit.name)

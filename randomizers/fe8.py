@@ -1,14 +1,15 @@
 import json
+import random
 from typing import Dict
 from randomizers import BaseRandomizer
-from structs import Character, Class
+from structs import Character, BranchedClass
 
 class SacredStonesRandomizer(BaseRandomizer):
     def __init__(self):
         super().__init__()
 
         self._num_to_select = 10
-        self._multiple_promotions = True
+        self._branched_promotions = True
 
         self._classes: Dict[Class] = {}
 
@@ -26,13 +27,13 @@ class SacredStonesRandomizer(BaseRandomizer):
     def parse_classes(self, data: dict) -> None:
         for classJSON in data["classes"]:
             class_name: str = classJSON["name"]
-            self._classes[class_name] = Class(class_name)
+            self._classes[class_name] = BranchedClass(class_name)
         
         for classJSON in data["classes"]:
-            class_obj: Class = self._classes[classJSON["name"]]
+            class_obj: BranchedClass = self._classes[classJSON["name"]]
 
             for promotion_str in classJSON["promotions"]:
-                promotion: Class = self._classes[promotion_str]
+                promotion: BranchedClass = self._classes[promotion_str]
                 class_obj.add_promotion(promotion)
 
     def parse_characters(self, data: dict) -> None:
@@ -43,5 +44,18 @@ class SacredStonesRandomizer(BaseRandomizer):
             self._characters[char_name] = Character(char_name, char_class)
 
 
-if __name__ == "__main__":
-    r = SacredStonesRandomizer()
+    def randomize_classes(self):
+        for selected_unit in self._selected_units:
+            current_class: BranchedClass = selected_unit.char_class
+
+            while current_class.has_promotions():
+                current_class.selected_promotion = random.choice(current_class.promotions)
+                current_class = current_class.selected_promotion
+    
+    def print_selections(self):
+        for unit in self._selected_units:
+            unit_class: BranchedClass = unit.char_class
+            while (unit_class.has_promotions()):
+                unit_class = unit_class.selected_promotion
+            
+            print(f"{unit.name} - {unit_class.name}")
