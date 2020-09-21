@@ -18,10 +18,10 @@ class SacredStonesCharacter(Character):
 
 class SacredStonesRandomizer(BaseRandomizer):
     def __init__(self):
-        super().__init__()
-
-        self._num_to_select = 10
-        self._branched_promotions = True
+        super().__init__(
+            num_to_select=10,
+            branched_promotions=True
+        )
 
         self._classes: Dict[Class] = {}
 

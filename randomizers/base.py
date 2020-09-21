@@ -4,16 +4,21 @@ import random
 
 
 class BaseRandomizer:
-    def __init__(self):
+    def __init__(self,
+        num_to_select: int = 0,
+        branched_promotions: bool = False,
+        reclassing: bool = False,
+        marriage: bool = False
+    ):
         self._characters: Dict[Character] = {}
 
-        self._num_to_select = 0
+        self._num_to_select = num_to_select
         self._guaranteed_units: List[Character] = []
         self._selected_units: List[Character] = []
 
-        self._branched_promotions: bool = False
-        self._reclassing: bool = False
-        self._marriage: bool = False
+        self._branched_promotions: bool = branched_promotions
+        self._reclassing: bool = reclassing
+        self._marriage: bool = marriage
 
 
     def has_multiple_promotions(self) -> bool:
