@@ -19,17 +19,6 @@ class BranchedClass(Class):
     def add_promotion(self, promotion: BranchedClass) -> None:
         self.promotions.append(promotion)
 
-    def get_final_promotions(self) -> List[BranchedClass]:
-        if self.has_promotions():
-            promotions_list: List[BranchedClass] = []
-
-            for promotion in self.promotions:
-                promotions_list.extend(promotion.get_final_promotions())
-
-            return list(dict.fromkeys(promotions_list))
-        else:
-            return [self]
-
 
 class Character:
     def __init__(self, name: str):

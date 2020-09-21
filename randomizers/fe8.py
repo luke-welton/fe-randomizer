@@ -1,3 +1,4 @@
+from __future__ import annotations
 import json
 import random
 from typing import Dict, List
@@ -16,6 +17,19 @@ class SacredStonesCharacter(Character):
         return self.base_class.get_final_promotions()
 
 
+class MultiTierBranchedClass(BranchedClass):
+    def get_final_promotions(self) -> List[MultiTierBranchedClass]:
+        if self.has_promotions():
+            promotions_list: List[MultiTierBranchedClass] = []
+
+            for promotion in self.promotions:
+                promotions_list.extend(promotion.get_final_promotions())
+
+            return list(dict.fromkeys(promotions_list))
+        else:
+            return [self]
+
+
 class SacredStonesRandomizer(BaseRandomizer):
     def __init__(self):
         super().__init__(
@@ -23,7 +37,7 @@ class SacredStonesRandomizer(BaseRandomizer):
             branched_promotions=True
         )
 
-        self._classes: Dict[BranchedClass] = {}
+        self._classes: Dict[MultiTierBranchedClass] = {}
 
 
     def parse_data(self) -> None:
@@ -39,26 +53,26 @@ class SacredStonesRandomizer(BaseRandomizer):
     def parse_classes(self, data: dict) -> None:
         for classJSON in data["classes"]:
             class_name: str = classJSON["name"]
-            self._classes[class_name] = BranchedClass(class_name)
+            self._classes[class_name] = MultiTierBranchedClass(class_name)
         
         for classJSON in data["classes"]:
-            class_obj: BranchedClass = self._classes[classJSON["name"]]
+            class_obj: MultiTierBranchedClass = self._classes[classJSON["name"]]
 
             for promotion_str in classJSON["promotions"]:
-                promotion: BranchedClass = self._classes[promotion_str]
+                promotion: MultiTierBranchedClass = self._classes[promotion_str]
                 class_obj.add_promotion(promotion)
 
     def parse_characters(self, data: dict) -> None:
         for characterJSON in data["characters"]:
             char_name: str = characterJSON["name"]
-            char_class: BranchedClass = self._classes[characterJSON["class"]]
+            char_class: MultiTierBranchedClass = self._classes[characterJSON["class"]]
 
             self._characters[char_name] = SacredStonesCharacter(char_name, char_class)
 
 
     def randomize_classes(self):
         for unit in self._selected_units:
-            final_promotions: List[BranchedClass] = unit.get_final_promotions()
+            final_promotions: List[MultiTierBranchedClass] = unit.get_final_promotions()
             unit.selected_promotion = random.choice(final_promotions)
 
 
