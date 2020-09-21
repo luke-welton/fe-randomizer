@@ -16,16 +16,14 @@ def main() -> None:
     randomizer.print_selections()
 
 
-
-def get_game_name() -> str: 
-    game_name: str = ""
-    
+def get_game_name() -> str:
     if len(argv) < 2:
-        game_name = input("Please enter a game entry in fe# format (e.g. fe8):\t")
+        game_name: str = input("Please enter a game entry in fe# format (e.g. fe8):\t")
     else:
-        game_name = argv[1]
+        game_name: str = argv[1]
     
     return game_name
+
 
 if __name__ == "__main__":
     main()
